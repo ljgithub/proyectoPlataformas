@@ -16,7 +16,7 @@ namespace Aplication_process
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Proyectos());
+            Application.Run(new Login());
         }
     }
 }
