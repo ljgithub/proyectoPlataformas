@@ -51,10 +51,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdd_helpdeskDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Categoria_Proceso.cs">
+    <Compile Include="bdd_helpdeskDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdd_helpdeskDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Categoria_Proceso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Categoria_Proceso.Designer.cs">
+    <Compile Include="Formularios\Categoria_Proceso.Designer.cs">
       <DependentUpon>Categoria_Proceso.cs</DependentUpon>
     </Compile>
     <Compile Include="crud\Categoria_proceso.cs" />
@@ -75,47 +80,47 @@
     <Compile Include="MDIprincipal.Designer.cs">
       <DependentUpon>MDIprincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Preguntas.cs">
+    <Compile Include="Formularios\Preguntas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Preguntas.Designer.cs">
+    <Compile Include="Formularios\Preguntas.Designer.cs">
       <DependentUpon>Preguntas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proyectos.cs">
+    <Compile Include="Formularios\Proyectos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Proyectos.Designer.cs">
+    <Compile Include="Formularios\Proyectos.Designer.cs">
       <DependentUpon>Proyectos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Roles.cs">
+    <Compile Include="Formularios\Roles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Roles.Designer.cs">
+    <Compile Include="Formularios\Roles.Designer.cs">
       <DependentUpon>Roles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tipo_preguntas.cs">
+    <Compile Include="Formularios\Tipo_preguntas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tipo_preguntas.Designer.cs">
+    <Compile Include="Formularios\Tipo_preguntas.Designer.cs">
       <DependentUpon>Tipo_preguntas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tipo_Proyecto.cs">
+    <Compile Include="Formularios\Tipo_Proyecto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tipo_Proyecto.Designer.cs">
+    <Compile Include="Formularios\Tipo_Proyecto.Designer.cs">
       <DependentUpon>Tipo_Proyecto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios.cs">
+    <Compile Include="Formularios\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios.Designer.cs">
+    <Compile Include="Formularios\Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="validaciones\Encriptacion.cs" />
     <Compile Include="validaciones\Validaciones.cs" />
-    <EmbeddedResource Include="Categoria_Proceso.resx">
+    <EmbeddedResource Include="Formularios\Categoria_Proceso.resx">
       <DependentUpon>Categoria_Proceso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -133,19 +138,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Proyectos.resx">
+    <EmbeddedResource Include="Formularios\Proyectos.resx">
       <DependentUpon>Proyectos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Roles.resx">
+    <EmbeddedResource Include="Formularios\Roles.resx">
       <DependentUpon>Roles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tipo_preguntas.resx">
+    <EmbeddedResource Include="Formularios\Tipo_preguntas.resx">
       <DependentUpon>Tipo_preguntas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tipo_Proyecto.resx">
+    <EmbeddedResource Include="Formularios\Tipo_Proyecto.resx">
       <DependentUpon>Tipo_Proyecto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios.resx">
+    <EmbeddedResource Include="Formularios\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bdd_helpdeskDataSet.xsc">
@@ -158,6 +163,17 @@
     </None>
     <None Include="bdd_helpdeskDataSet.xss">
       <DependentUpon>bdd_helpdeskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_helpdeskDataSet1.xsc">
+      <DependentUpon>bdd_helpdeskDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bdd_helpdeskDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdd_helpdeskDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdd_helpdeskDataSet1.xss">
+      <DependentUpon>bdd_helpdeskDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

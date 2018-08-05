@@ -58,8 +58,8 @@ namespace Aplication_process
                     else
                     {
                         MessageBox.Show("Usuario no encontrado");
-                        txt_clave.Text = "";
-                        txt_email.Text = "";
+                        txt_clave.Text = "USUARIO";
+                        txt_email.Text = "CONTRASEÑA";
                     }
                 }
 
@@ -72,6 +72,50 @@ namespace Aplication_process
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_email_Enter(object sender, EventArgs e)
+        {
+            if (txt_email.Text == "USUARIO") {
+                txt_email.Text = "";
+                txt_email.ForeColor = Color.LightGray;
+            } 
+        }
+
+        private void txt_email_Leave(object sender, EventArgs e)
+        {
+            if (txt_email.Text == "") { txt_email.Text = "USUARIO"; txt_email.ForeColor = Color.DimGray; }
+        }
+
+        private void txt_clave_Enter(object sender, EventArgs e)
+        {
+            if (txt_clave.Text == "CONTRASEÑA")
+            {
+                txt_clave.Text = "";
+                txt_clave.ForeColor = Color.LightGray;
+                txt_clave.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txt_clave_Leave(object sender, EventArgs e)
+        {
+            if (txt_clave.Text == "") { txt_clave.Text = "CONTRASEÑA"; txt_clave.ForeColor = Color.DimGray; }
+            txt_clave.UseSystemPasswordChar = false;
+        }
+
+        private void txt_clave_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
