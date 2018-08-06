@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Aplication_process
 {
@@ -18,6 +19,11 @@ namespace Aplication_process
         {
             InitializeComponent();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hand, int wmsg, int wparam, int lparam);
 
         private void ShowNewForm(object sender, EventArgs e)
         {
@@ -153,6 +159,47 @@ namespace Aplication_process
             Preguntas p = new Preguntas();
             p.MdiParent = this;
             p.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (menuVeritical2.Width == 250)
+            {
+                menuVeritical2.Width = 70;
+            }
+            else {
+                menuVeritical2.Width = 250;
+            }
+        }
+
+        private void icon_cerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void icon_Maximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            icon_Restaurar.Visible = true;
+            icon_Maximizar.Visible = false;
+        }
+
+        private void icon_Restaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            icon_Restaurar.Visible = false;
+            icon_Maximizar.Visible = true;
+        }
+
+        private void icon_Minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
